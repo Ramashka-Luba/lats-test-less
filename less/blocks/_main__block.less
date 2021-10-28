@@ -1,0 +1,48 @@
+// main: ./../main.less
+
+.main {
+    &__inner{
+        display: grid;
+        grid-template-columns: 15px 1fr 15px;
+        background-color: @lightBg;
+
+        @media (min-width: 414px) {
+            grid-template-columns: 10px 1fr 10px;
+            background-color: #fff;
+        }
+    }
+    &__wrapper-img {
+        grid-column: 1/4;
+        max-width: 510px;
+        overflow: hidden;
+        position: relative;
+
+        height: 225px;
+
+        @media (min-width: 414px) {
+            height: 260px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(253, 255, 140, 0.49);
+        }
+    }
+    &__img {
+        object-fit: cover;
+        height: 100%;
+    }
+    &__quotes-wrap {
+        grid-column: 2/3;
+        padding: 20px 0;
+        background-color: @lightBg;
+    }
+    &__quotes {
+        background-color: @blogBg;
+        height: 320px;
+    }
+}

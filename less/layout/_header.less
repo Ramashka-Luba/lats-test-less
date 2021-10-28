@@ -1,0 +1,59 @@
+// main: ./../main.less
+
+.header {
+    padding: 10px 0;
+    @media (min-width: 768px) {
+        padding: 20px 0;
+    }
+    .container {
+        .container ();
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: 960px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__logo{
+        @media (min-width: 960px) {
+            margin-left: 40px;
+        }
+    }
+    &__logo-img {
+        width: 70px;
+        // border: 1px solid red;
+        @media (min-width: 768px) {
+            width: 105px;
+        }
+    }
+    &__menu {
+        @media (min-width: 960px) {
+            width: 100%;
+        }
+    }
+    &__nav {
+        display: none;
+        @media (min-width: 960px) {
+            display: block;
+            width: 100%;
+            height: 40px;
+            background-color: @accent;
+        }
+    }
+    &__burger-menu{
+        @media (min-width: 960px) {
+            display: none;
+        }
+    }
+    &__burger-btn {
+        width: 42px;
+        height: 42px;
+        background-color: @accent;
+        border: none;
+    }
+    &__burger-nav {}
+}
